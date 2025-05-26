@@ -13,13 +13,13 @@
 
       <div class="flex items-center">
         <button
-          id="menu-toggle"
+          @click="menuOpen = !menuOpen"
           type="button"
-          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+          class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
         >
           <span class="sr-only">Open main menu</span>
           <svg
-            class="h-6 w-6"
+            class="h-6 w-6 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -34,7 +34,11 @@
         </button>
       </div>
 
-      <div class="w-full md:block md:w-auto hidden" id="mobile-menu">
+      <!-- Menu yang bisa dibuka/tutup -->
+      <div
+        :class="['w-full md:block md:w-auto', menuOpen ? 'block' : 'hidden']"
+        id="mobile-menu"
+      >
         <ul
           class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
         >
@@ -79,3 +83,9 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+import { ref } from "vue";
+
+const menuOpen = ref(false);
+</script>
