@@ -4,12 +4,18 @@
       <h2 class="font-bold text-[20px] mb-2">
         foto & kegiatan {{ group.label }}
       </h2>
-      <div class="grid grid-cols-4 gap-2 ">
+      <div class="grid grid-cols-4 gap-2">
         <div
-          v-for="n in group.count"
-          :key="n"
-          class="w-full h-60 bg-gray-300 rounded "
-        />
+          v-for="(foto, i) in group.count"
+          :key="i"
+          class="w-full h-60 rounded overflow-hidden"
+        >
+          <img
+            :src="foto"
+            alt="foto kegiatan"
+            class="w-full h-full object-cover"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -17,8 +23,7 @@
 
 <script setup>
 const groups = [
-  { label: "", count: 5 },
-  { label: "1", count: 5 },
-  { label: "2", count: 4 },
+  { label: "Arisan PKK", count: ["/4.jpg"] },
+  { label: "DAWIS", count: ["/3.jpg"] },
 ];
 </script>

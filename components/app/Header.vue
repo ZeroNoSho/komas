@@ -7,7 +7,7 @@
         <span
           class="self-center text-xl font-semibold whitespace-nowrap text-white"
         >
-          RT 01 RW 03 KARANGPUCUNG
+          PKK RT 1 RW 7 ledug
         </span>
       </NuxtLink>
 
@@ -66,7 +66,7 @@
               :exact-active-class="'text-white'"
               class="block py-2 pr-4 pl-3 text-gray-300 hover:text-white md:p-0"
             >
-              Bagan RT
+              Bagan PKK
             </NuxtLink>
           </li>
           <li>

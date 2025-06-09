@@ -4,7 +4,7 @@ import ImageFirst from "@/components/ui/ImageFirst.vue";
 
 <template>
   <div class="gap-10 sm:flex-row flex-col flex">
-    <ImageFirst />
-    <ImageFirst />
+    <ImageFirst src="/1.jpg" />
+    <ImageFirst src="/2.jpg" />
   </div>
 </template>
